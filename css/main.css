@@ -1,0 +1,139 @@
+/* ibm-plex-serif-regular - latin */
+@font-face {
+    font-family: 'IBM Plex Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('IBM Plex Serif'), local('IBMPlexSerif'),
+         url('../fonts/ibm-plex-serif-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ibm-plex-serif-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+/* ibm-plex-mono-600italic - latin */
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-style: italic;
+    font-weight: 600;
+    src: local('IBM Plex Mono SemiBold Italic'), local('IBMPlexMono-SemiBoldItalic'),
+            url('../fonts/ibm-plex-mono-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/ibm-plex-mono-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --black: #01111D;
+    --main-bg-color: #EEEDEC;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.js .fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.js .is-hidden {
+    opacity: 0;
+}
+
+body,
+html {
+    min-height: calc(100vh - 0.5rem);
+}
+
+html {
+    background-color: var(--black);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    border-radius: 0.25rem;
+    color: var(--black);
+    display: grid;
+    font-family: 'IBM Plex Serif', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.25rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+h1,
+p {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+h1 {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 3rem;
+    font-style: italic;
+    line-height: 1.2;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 54ch;
+}
+
+strong {
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+main {
+    margin: auto;
+    padding: 2rem;
+}
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 720px) {
+    header {
+        display: grid;
+        justify-content: center;
+        grid-gap: 2rem;
+        grid-template-columns: 256px 1fr;
+        margin: 0 auto 2rem;
+        max-width: 656px;
+    }
+
+    h1 {
+        align-self: center;
+        margin-bottom: 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 528px) {
+    h1 {
+        --minFontSize: 1.5rem;
+        --maxFontSize: 3rem;
+        --scaler: 10vw;
+        font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) );
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+}
