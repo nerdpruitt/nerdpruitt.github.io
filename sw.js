@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-var version = '0.0.1';
+var version = '0.0.2';
 var coreCache = 'core-' + version;
 
 var cacheIDs = [coreCache];
