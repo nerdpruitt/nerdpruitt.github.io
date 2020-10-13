@@ -1,6 +1,11 @@
+/**
+ * Tip of the hat to the awesome set of articles on Service Workers
+ * found at https://gomakethings.com/articles/
+ */
+
 /* eslint-disable */
 
-var version = '0.0.2';
+var version = '0.0.3';
 var coreCache = 'core-' + version;
 
 var cacheIDs = [coreCache];
