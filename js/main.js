@@ -1,17 +1,22 @@
-// handle opening in new tab by detecting modifier
-// handle scroll position
-// handle anchor links
-// handle history - push, replace, and pop state
+// Detect which link clicks to follow
+// Store scroll position
+// History - push, replace, and pop state
+// Fetch, validate pages and urls
 // cache pages
 
-
 // potentially move to utility
-function dispatchEvent(name, info) {
+function dispatchEvent (name, info) {
     const event = new CustomEvent(name, {
-        detail: info,
+        detail: info
     });
 
     document.dispatchEvent(event);
+}
+
+function expandURL (locatable) {
+    const anchor = document.createElement('a');
+    anchor.href = locatable.toString();
+    return new URL(anchor.href);
 }
 
 /**
@@ -38,6 +43,8 @@ const onClick = (event) => {
 
         return response.text();
     }).then((html) => {
+        // inspect the html to make sure it's all good.
+
         // Convert the HTML string into a document object
         var parser = new DOMParser();
         var doc = parser.parseFromString(html, 'text/html');
@@ -55,4 +62,95 @@ const onClick = (event) => {
     });
 };
 
-document.addEventListener('click', onClick);
+
+class History {
+
+}
+
+
+class Page {
+
+}
+
+// Link click observer delegate
+// willFollowLinkToLocation(link: Element, location: URL) {
+//     return this.elementIsNavigable(link) &&
+//         this.locationIsVisitable(location) &&
+//         this.applicationAllowsFollowingLinkToLocation(link, location);
+// }
+
+// followedLinkToLocation(link: Element, location: URL) {
+//     const action = this.getActionForLink(link)
+//     this.visit(location.href, { action })
+// }
+
+
+
+class ScrollObserver {
+
+}
+
+
+class LinkObserver {
+    start () {
+        if (!this.started) {
+            window.addEventListener('click', this.captureClick, true);
+            this.started = true;
+        }
+    }
+
+    stop () {
+        if (this.started) {
+            window.removeEventListener('click', this.captureClick, true);
+            this.started = false;
+        }
+    }
+
+    // Is this a click we should care about?
+    // Or is it cmd + click, right click, etc.
+    trackClick (event) {
+        return !(
+            (event.target && event.target.isContentEditable) ||
+            event.defaultPrevent ||
+            event.which > 1 ||
+            event.altKey ||
+            event.ctrlKey ||
+            event.metaKey ||
+            event.shiftKey
+        );
+    }
+
+    clickBubble (event) {
+        // Evaluate if we care about the click
+        if (this.trackClick(event)) {
+            const link = this.findLinkFromClickTarget(event.target);
+
+            if (link) {
+                const location = this.getLocationForLink(link);
+
+                // If it's all good, fetch location and go!!
+
+                // if (this.delegate.willFollowLinkToLocation(link, location)) {
+                //     event.preventDefault();
+                //     this.delegate.followedLinkToLocation(link, location);
+                // }
+            }
+        }
+    }
+
+    captureClick () {
+        window.removeEventListener('click', this.clickBubble);
+        window.addEventListener('click', this.clickBubble);
+    }
+
+    findLinkFromClickTarget (target) {
+        if (target) {
+            // Not opening in a new window or a download
+            return target.closest('a[href]:not([target^=_]):not([download])');
+        }
+    }
+
+    getLocationForLink (link) {
+        return expandURL(link.getAttribute('href') || '');
+    }
+}
