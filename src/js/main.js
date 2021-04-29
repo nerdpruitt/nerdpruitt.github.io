@@ -58,7 +58,7 @@ const onClick = (event) => {
         // hide loading element
     }).catch((error) => {
         // There was an error
-        console.warn('Something went wrong.', error);
+        console.warn('The guy who built this must be a hack because something went wrong.', error);
     });
 };
 
