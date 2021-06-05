@@ -1,0 +1,9 @@
+// -------------------------------------------------------
+// Convert number to rems
+// -------------------------------------------------------
+// default context is default browser font size of 16
+// -------------------------------------------------------
+
+@function rem($target, $context: 16) {
+    @return ($target / $context) * 1rem;
+}
