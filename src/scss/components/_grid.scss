@@ -61,7 +61,6 @@
     img {
         height: 408px;
         float: left;
-        margin-bottom: _f.rem(24);
         width: auto;
     }
 }
@@ -96,6 +95,7 @@
     font-size: _f.rem(18);
     font-weight: var(--font-weight-light);
     margin-left: 80px;
+    padding-top: 1.5rem;
 }
 
 .grid-img-full {
@@ -122,6 +122,20 @@
     margin: 0.5em;
     text-transform: uppercase;
     writing-mode: vertical-lr;
+}
+
+.hd-2 {
+    font-family: var(--font-family-heading);
+    font-size: _f.rem(40);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-heading);
+}
+
+.hd-3 {
+    font-family: var(--font-family-heading);
+    font-size: _f.rem(30);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-heading);
 }
 
 .previous,

@@ -1,0 +1,81 @@
+---
+layout: layouts/base.liquid
+pageTitle: Mailing Admin
+---
+
+<article>
+    <section class="grid-main u-margin--b-m">
+        <div class="grid-main__gutter-l">
+            <h2 class="section-title">Intro</h2>
+        </div>
+        <div class="grid-main__content grid-main__content--narrow">
+            <p class="dropcap">At Abenity we send a *LOT* of email. Due to requirements we have around certain proprietary business rules, we had to roll our own system for managing lists and campaigns. One team member even had to devote about 80% of his time to creating and editing HTML email templates. We wanted to free up his time and empower our marketing team to do this work without needing help from the development team, and we wanted to refactor a legacy system that grew organically over time into something that was easily understood. I enjoy projects like this because I like helping the other teams at our company and because I like working closely with the backend to figure out the best way to build complex features like this.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="grid-main u-margin--b-m">
+            <div class="grid-main__gutter-l">
+                <h2 class="section-title">Goals</h2>
+            </div>
+            <div class="grid-main__content grid-main__content--narrow">
+                <p>There were two main problems that needed solving with this update. Number one, we needed to create an admin for managing campaigns and understanding how it coordinated with the mailing provider we were using to actually send the final email. This needed a whole new language developed around it so that new hires could intuitively understand the system as well as someone who had worked with it for years. Number two, we needed a way for someone with no HTML experience to be able to create custom HTML emails. Along with this goal, we also needed to create a system to quickly generate the forms needed to enter the content to create these emails.</p>
+            </div>
+        </div>
+
+        <div class="grid-main u-margin--b-m">
+            <div class="grid-main__gutter-l"></div>
+            <div class="grid-main__content">
+                <h3 class="hd-3">Template Development</h3>
+                <div class="columns">
+                    <p>There were main pieces to build for this project, enabling our marketing team to create and update HTML email templates, and managing the campaigns for the email sends, which including syncing with a third party service to send the emails. This would become a new section in a single page application built in VueJS that we use to maintain content internally.</p>
+
+                    <p>First, I created a responsive HTML email that would work across  our testing suite (thanks Litmus!) without using media queries (thanks Gmail on Android!). Yes, it’s as gross and weird as it sounds. For making this base HTML email into configurable template variations, each mailing template has a set of JSON, that is fetched and transformed into a form by a Vue Component. Then there is a corresponding Blade template that reads the data created by the form and generates an HTML page. This is pulled into an iframe that is positioned by the form for an updated real time preview any time you save you work.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-main u-margin--b-m">
+            <div class="grid-main__gutter-l"></div>
+            <div class="grid-main__content grid-img">
+                <figure class="grid__img grid__img--left">
+                    <img src="https://via.placeholder.com/568x409.png?
+                    text=Placeholder">
+                    <figcaption class="grid-img__caption"><strong>Figure One:</strong> This is a very important screen that captures important details you need to see that will definitely make you hire me.</figcaption>
+                </figure>
+                <div class="grid-img__content grid-img__content--right">
+                    <h3 class="hd-3">Attention to Detail</h3>
+                    <p>I added warnings to let you know when there are unsaved changes and an alert that alerts you if you try to leave the view (whether on purpose or accidentally) without saving. Some of these emails get pretty long also, so I have the iframe scroll to and highlight whatever section you’re editing as you update the content of the email. As a last touch, I added a dropdown that allows you to select any of the clients and preview the email as that client to view any customizations that would be made to the content. We even added the ability for the client to preview the email in one of our apps and approve it for their users before we send it!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-main u-margin--b-m">
+            <div class="grid-main__gutter-l"></div>
+            <div class="grid-main__content">
+                <h3 class="hd-3">Admin Development</h3>
+                <div class="columns">
+                    <p>The next piece of this project was creating the admin to organize the templates into coordinated campaigns that we can send to clients. We have a pretty unique set of rules that control this, so I don’t want to divulge too much, but this system was at a place where it was hard to explain to anyone new joining the team, as it was a methodology that grew organically over many years as the business grew. The legacy system also did not report how the campaigns were synced with the third party system we use to send the emails.</p>
+
+                    <p>The solution was to back and assess how the pieces of the system fit together and create a shared language for the team to understand and communicate it to one another and to future hires. I sat down the backend developer that was syncing this info with the party mailing provider to hash out what to call everything, used the [Breadboarding] methodology to rapidly work through UI options until we were satisfied. Then I build out the system of Vue components to power all the forms and view for creating campaigns, including controls to generate campaign sets from information such as client geographical data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="u-margin--b-m">
+
+    <section class="grid-main u-margin--b-m">
+        <div class="grid-main__gutter-l">
+            <h2 class="section-title">Conclusion</h2>
+        </div>
+        <div class="grid-main__content grid-main__content--narrow">
+            <p class="dropcap">We communicated the way the new system worked to our marketing team and trained them on how to use it. It was a really big success. Work that used to take days or weeks and required just about all of one of our team member’s time now only took a few hours. We put the power entirely in the hands of our marketing team by building tools to help them create specialized work without needing to involve the developer team at all. Empowering others to do their best work with something that I build is very satisfying for me.</p>
+        </div>
+    </section>
+</article>
+
+<a class="previous" href="/portfolio/vacation-planner">
+    <span>Previous</span>
+    <img src="/images/left-arrow.svg" alt="Left Arrow Icon">
+</a>

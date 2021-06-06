@@ -6,7 +6,7 @@ pageTitle: Capacity Managed Tickets
 <article>
     <section class="grid-main u-margin--b-m">
         <div class="grid-main__gutter-l">
-            <h3 class="section-title">Intro</h3>
+            <h2 class="section-title">Intro</h2>
         </div>
         <div class="grid-main__content grid-img">
             <div class="grid-img__content">
@@ -18,12 +18,11 @@ pageTitle: Capacity Managed Tickets
                 <figcaption class="grid-img__caption"><strong>Figure One:</strong> This is a very important screen that captures important details you need to see that will definitely make you hire me.</figcaption>
             </figure>
         </div>
-        <div class="grid-main__gutter-r">
     </section>
 
     <section class="grid-main u-margin--b-m">
         <div class="grid-main__gutter-l">
-            <h3 class="section-title">Goals</h3>
+            <h2 class="section-title">Goals</h2>
         </div>
         <div class="grid-main__content grid-main__content--narrow">
             <p>The main goal on this project was to introduce a new type of item to the store, based on the paradigm of booking it like a reservation, sort of like you would at a hotel or restaurant. All items in our store before were very simple; you set a quantity and added the item to your cart. This, however, would require a whole new flow for choosing a specific date and time, as well as tracking how long that spot was available. You can’t have someone paying for a spot that is no longer valid!</p>
@@ -33,7 +32,7 @@ pageTitle: Capacity Managed Tickets
     <section class="grid-main u-margin--b-m">
         <div class="grid-main__gutter-l"></div>
         <div class="grid-main__content">
-            <h3>A New Type of Item</h3>
+            <h3 class="hd-3">A New Type of Item</h3>
             <div class="columns u-margin--b-m">
                 <p>The first part of the solution involved how to set capacity managed items apart and enable the new flow with choosing a date and time. I decided that first I would distinguish which items were capacity managed and which were our standard items through the verbiage on the button. Capacity managed items would say “Book Now” as opposed to “Add to Cart”. From there I would introduce an interstitial view in a modal to find and choose a date and time, and then add it to the cart. This introduced the need for one of my favorite parts of this project, creating a date picker.</p>
 
@@ -48,29 +47,22 @@ pageTitle: Capacity Managed Tickets
         <figcaption class="grid-img__caption"><strong>Figure One:</strong> This is a very important screen that captures important details you need to see that will definitely make you hire me.</figcaption>
     </section>
 
-    <section class="grid-main u-margin--b-m">
-        <div class="grid-main__gutter-l"></div>
-        <div class="grid-main__content grid-main__content--narrow">
-            <h3>Custom Data Store</h3>
-            <p>The next big piece of functionality was tracking how long the ticket for the selected date and time is valid. I was given a requirement of displaying the timeout on the item controls to add it, the cart button in our main header, and on the item in our Order Summary table in the checkout flow.</p>
+    <section>
+        <div class="grid-main u-margin--b-m">
+            <div class="grid-main__gutter-l"></div>
+            <div class="grid-main__content grid-main__content--narrow">
+                <h3 class="hd-3">Custom Data Store</h3>
+                <p>The next big piece of functionality was tracking how long the ticket for the selected date and time is valid. I was given a requirement of displaying the timeout on the item controls to add it, the cart button in our main header, and on the item in our Order Summary table in the checkout flow.</p>
+            </div>
         </div>
-        <div class="grid-main__gutter-r"></div>
-    </section>
 
-    <section class="grid-main u-margin--b-m">
-        <div class="grid-main__gutter-l"></div>
-        <div class="grid-main__content grid-img">
-            <figure class="grid__img grid__img--left">
-                <img src="https://via.placeholder.com/568x409.png?
-                text=Placeholder">
-                <figcaption class="grid-img__caption"><strong>Figure One:</strong> This is a very important screen that captures important details you need to see that will definitely make you hire me.</figcaption>
-            </figure>
-            <div class="grid-img__content grid-img__content--right">
+        <div class="grid-main u-margin--b-m">
+            <div class="grid-main__gutter-l"></div>
+            <div class="columns">
                 <p>Vue is used in a somewhat unique way in our app. Rather than everything being built in Vue we use it sparingly, utilizing their most basic build on more complex components that warrant some kind of state management and reactivity. These are implemented as separate instances of Vue, attached to certain DOM elements on the page. This introduced a problem: I now had to keep a timer in sync on up to three different components on a single page, and I really didn’t want to add the weight and complexity of Vuex.</p>
                 <p>That’s when I discovered `Vue.observable`. This is what powers the basic reactivity of the `data` object in your Vue components. For what I needed in this scenario it was a perfect fit. I made a simple data store file, wrapping the properties I needed to be reactive with `Vue.observable`. Then I imported it into the components where I needed the data in sync, and it worked like a charm.</p>
             </div>
         </div>
-        <div class="grid-main__gutter-r"></div>
     </section>
 
     <section class="grid-main u-margin--b-m">
@@ -85,7 +77,7 @@ pageTitle: Capacity Managed Tickets
 
     <section class="grid-main u-margin--b-m">
         <div class="grid-main__gutter-l">
-            <h3 class="section-title">Conclusion</h2>
+            <h2 class="section-title">Conclusion</h2>
         </div>
         <div class="grid-main__content grid-main__content--narrow">
             <p class="dropcap">A project like this is fun for me for a number of reasons. It introduced new coding challenges in building the calendar and figuring out the leanest way to keep the data in sync. With Vue I had never synced data outside several components without Vuex, and I had also never built a calendar widget like this one. This project also involved re-evaluating an existing system and finding a clever and effective way to extend it and make it even more powerful. I enjoy having to think through how to grow the UI all while walking the careful line of staying within an existing system but also creating something entirely new. Finally, it met a new challenge and opened the door to selling this type of item, which is beneficial for our users and for our business.</p>
@@ -94,12 +86,7 @@ pageTitle: Capacity Managed Tickets
     </section>
 </article>
 
-<a class="previous" href="">
-    <span>Previous</span>
-    <img src="/images/left-arrow.svg" alt="Left Arrow Icon">
-</a>
-
-<a class="next" href="">
+<a class="next" href="/portfolio/vacation-planner">
     <span>Next</span>
     <img src="/images/right-arrow.svg" alt="Right Arrow Icon">
 </a>
