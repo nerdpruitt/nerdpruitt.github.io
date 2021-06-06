@@ -4,8 +4,101 @@
 
 body {
     background-color: var(--green);
+    font-family: var(--font-family-main);
+    height: 100%;
+    overflow: hidden;
 }
 
 .profile {
-    shape-outside: polygon(0px 0px, 124px 73px, 287px 430px, 275px 580px, 317px 652px, 380px 718px, 380px 805px, 332px 837px, 392px 935px, 332px 962px, 332px 988px, 380px 1012px, 392px 1078px, 456px 1134px, 486px 1227px, 625px 1310px, 625px 1610px, 0px 1610px)
+    height: 1610px;
+    float: left;
+    margin-left: -440px;
+    margin-top: -166px;
+    // position: absolute;
+    top: 0;
+    width: 1430px;
+
+    img {
+        height: 1610px;
+        float: left;
+        width: 1430px;
+    }
+}
+
+.text {
+    left: 397px;
+    position: absolute;
+    top: -166px;
+    width: 100%;
+    z-index: 5;
+
+    &::before {
+        content: '';
+        float: left;
+        height: 1610px;
+        shape-outside: polygon(0px 0px, 124px 73px, 287px 430px, 275px 580px, 317px 652px, 380px 718px, 380px 805px, 332px 837px, 392px 935px, 332px 962px, 332px 988px, 380px 1012px, 392px 1078px, 456px 1134px, 486px 1227px, 625px 1310px, 625px 1610px, 0px 1610px);
+        width: 625px;
+    }
+
+    h1 {
+        color: var(--white);
+        font-family: var(--font-family-heading);
+        font-size: _f.rem(72);
+        font-weight: var(--font-weight-black);
+        line-height: 1.5;
+        letter-spacing: var(--letter-spacing-caps);
+        margin-top: 600px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: _f.rem(40);
+        font-weight: var(--font-weight-regular);
+        line-height: 2;
+    }
+}
+
+// ---------------------
+// Main site navigation
+// ---------------------
+.nav-main {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: 10;
+}
+
+.nav-main__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        margin-bottom: _f.rem(16);
+        margin-right: _f.rem(30);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav-main__link {
+    color: var(--white);
+    font-size: _f.rem(36);
+    position: relative;
+    text-decoration: none;
+    z-index: 5;
+
+    &::after {
+        background-color: var(--black);
+        bottom: 4px;
+        content: '';
+        left: -2px;
+        height: 4px;
+        position: absolute;
+        right: -2px;
+        z-index: -1;
+    }
 }

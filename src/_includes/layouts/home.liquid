@@ -10,7 +10,13 @@
 </head>
 
 <body class="home">
-    {% include '../partials/nav.liquid' %}
+    <nav class="nav-main" role="navigation">
+        <ul class="nav-main__list">
+            <li><a class="nav-main__link" href="{{ '/about' | url }}">about</a></li>
+            <li><a class="nav-main__link" href="{{ '/portfolio' | url }}">portfolio</a></li>
+            <li><a class="nav-main__link" href="{{ '/resume' | url }}">resume</a></li>
+        </ul>
+    </nav>
 
     <main>
         {{ content }}
