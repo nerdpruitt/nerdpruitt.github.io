@@ -1,0 +1,11 @@
+@forward './config';
+
+@use './functions' as _f;
+
+body {
+    background-color: var(--green);
+}
+
+.profile {
+    shape-outside: polygon(0px 0px, 124px 73px, 287px 430px, 275px 580px, 317px 652px, 380px 718px, 380px 805px, 332px 837px, 392px 935px, 332px 962px, 332px 988px, 380px 1012px, 392px 1078px, 456px 1134px, 486px 1227px, 625px 1310px, 625px 1610px, 0px 1610px)
+}

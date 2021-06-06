@@ -62,7 +62,7 @@ h1 {
 // }
 
 p {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     margin-top: 0;
 }
 
@@ -85,18 +85,4 @@ p + p {
     // main {
     //     padding: 1rem;
     // }
-}
-
-.dropcap::first-letter {
-    float: left;
-    font-family: var(--font-family-dropcap);
-    font-size: 3.25rem;
-    line-height: 1;
-    padding-right: 8px;
-}
-
-.columns {
-    column-count: 2;
-    column-gap: var(--grid-column-gap);
-    // column-rule: var(--border-width-thin) solid var(--color-border);
 }

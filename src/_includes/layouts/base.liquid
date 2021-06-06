@@ -1,28 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include '../partials/head.liquid' %}
 
-    <title>Nick Pruitt</title>
-
-    <meta name="description" content="Nick Pruitt, front end developer, graphic designer, and your new friend.">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="https://use.typekit.net/xyc1vcw.css">
     <link rel="stylesheet" href="/dist/css/main.css">
 
-    <script>
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
-    </script>
+    {% include '../partials/js-support.liquid' %}
 </head>
+
 <body>
     <header class="site-header">
         {% if pageHeader %}
@@ -34,14 +20,7 @@
         {% endif %}
 
         <div>
-            <nav class="nav-main" role="navigation">
-                <a class="nav-main__logo" href="/">nickpruitt</a>
-                <ul class="nav-main__list">
-                    <li><a class="nav-main__link" href="{{ '/about' | url }}">about</a></li>
-                    <li><a class="nav-main__link" href="{{ '/portfolio' | url }}">portfolio</a></li>
-                    <li><a class="nav-main__link" href="{{ '/resume' | url }}">resume</a></li>
-                </ul>
-            </nav>
+            {% include '../partials/nav.liquid' %}
         </div>
     </header>
 
@@ -71,13 +50,6 @@
         </div>
     </div>
 
-    <script src="/dist/js/main.js" async></script>
-
-    {% comment %} <script>
-        // Initialize the service worker
-        if (navigator && navigator.serviceWorker) {
-           navigator.serviceWorker.register('/sw.js');
-        }
-    </script> {% endcomment %}
+    {% include '../partials/javascript.liquid' %}
 </body>
 </html>
