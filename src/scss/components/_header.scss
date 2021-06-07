@@ -1,10 +1,21 @@
 @use '../functions' as _f;
 
 .site-header {
-    display: grid;
-    grid-template-columns: 1fr _f.rem(292);
-    margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto _f.rem(64);
     max-width: var(--main-width);
+
+    @media (max-width: 780px) {
+        .nav-main-wrap {
+            order: -1;
+        }
+    }
+
+    @media (min-width: 781px) {
+        display: grid;
+        grid-template-columns: 1fr _f.rem(292);
+    }
 }
 
 // ---------------------
@@ -12,7 +23,11 @@
 // ---------------------
 .nav-main {
     background-color: var(--green);
-    padding: _f.rem(32) _f.rem(40);
+    padding: _f.rem(16) _f.rem(20);
+
+    @media (min-width: 781px) {
+        padding: _f.rem(32) _f.rem(40);
+    }
 }
 
 .nav-main__logo {
@@ -26,12 +41,23 @@
 }
 
 .nav-main__list {
+    display: flex;
+    flex-direction: row;
     list-style: none;
-    margin: 0;
+    margin: 0 ;
     padding: 0;
 
+    @media (min-width: 781px) {
+        flex-direction: column;
+    }
+
     > li {
-        margin-bottom: _f.rem(16);
+        margin-right: _f.rem(30);
+
+        @media (min-width: 781px) {
+            margin-bottom: _f.rem(16);
+            margin-right: 0;
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -64,10 +90,17 @@
 // ---------------------
 
 .page-header {
-    display: grid;
-    grid-column-gap: _f.rem(40);
-    grid-template-columns: auto 1fr;
-    padding-top: _f.rem(80);
+    padding-top: _f.rem(40);
+
+    @media (min-width: 481px) {
+        display: grid;
+        grid-column-gap: _f.rem(40);
+        grid-template-columns: auto 1fr;
+    }
+
+    @media (min-width: 781px) {
+        padding-top: _f.rem(80);
+    }
 }
 
 .page-header__img {
@@ -85,18 +118,30 @@
         font-weight: var(--font-weight-black);
         letter-spacing: var(--letter-spacing-caps);
         line-height: var(--line-height-heading);
-        margin: 0;
+        margin: 2rem 0 0 1rem;
         text-transform: uppercase;
-        writing-mode: vertical-lr;
+
+        @media (min-width: 481px) {
+            margin: 0;
+            writing-mode: vertical-lr;
+        }
     }
 }
 
 .page-header--bottom {
+    @media (max-width: 1200px) {
+        padding-left: 1rem;
+    }
+
     .page-header__title {
         align-self: end;
-        font-size: _f.rem(54);
+        font-size: _f.rem(40);
         font-weight: var(--font-weight-black);
         line-height: var(--line-height-heading);
         margin: 0;
+
+        @media (min-width: 781px) {
+            font-size: _f.rem(54);
+        }
     }
 }
