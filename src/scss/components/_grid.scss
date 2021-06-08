@@ -5,6 +5,17 @@
         display: grid;
         grid-template-columns: 1fr minmax(65ch, 1040px) 1fr;
     }
+
+    a {
+        &:link,
+        &:visited {
+            color: var(--red);
+        }
+
+        &:hover {
+            color: var(--black);
+        }
+    }
 }
 
 .grid-main--img {
@@ -80,37 +91,37 @@
 @media (min-width: 1081px) {
     .grid-img {
         grid-template-columns: 1fr 1fr;
-    }
 
-    .grid-img__content {
-        &::before {
-            content: '';
-            float: right;
-            height: 408px;
-            shape-outside: polygon(80px 0px, 80px 408px, 0px 204px);
-            width: 80px;
-        }
-    }
-
-    .grid__img {
-        position: relative;
-        z-index: 1;
-
-        &::before {
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg height='408' viewBox='0 0 80 408' width='80' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m80 0-80 203.501222 80 204.498778h-80v-408z' fill='%23fff' fill-rule='evenodd'/%3e%3c/svg%3e");
-            content: '';
-            height: 408px;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 80px;
-            z-index: 2;
+        .grid-img__content {
+            &::before {
+                content: '';
+                float: right;
+                height: 408px;
+                shape-outside: polygon(80px 0px, 80px 408px, 0px 204px);
+                width: 80px;
+            }
         }
 
-        img {
-            height: 408px;
-            float: left;
-            width: auto;
+        .grid-img .grid__img {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg height='408' viewBox='0 0 80 408' width='80' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m80 0-80 203.501222 80 204.498778h-80v-408z' fill='%23fff' fill-rule='evenodd'/%3e%3c/svg%3e");
+                content: '';
+                height: 408px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 80px;
+                z-index: 2;
+            }
+
+            img {
+                height: 408px;
+                float: left;
+                width: auto;
+            }
         }
     }
 
@@ -135,6 +146,18 @@
         &::before {
             float: left;
             shape-outside: polygon(0px 0px, 80px 208px, 0px 408px);
+        }
+    }
+
+    .grid-img-alt {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            border: 1px solid var(--black);
+            height: 500px;
+            float: left;
+            width: auto;
         }
     }
 
