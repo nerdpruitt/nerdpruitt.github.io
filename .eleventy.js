@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/site.webmanifest");
     eleventyConfig.addPassthroughCopy("./src/sw.js");
     eleventyConfig.addPassthroughCopy("./src/browserconfig.xml");
+    eleventyConfig.addPassthroughCopy("./src/CNAME");
 
     // Current year for copyright
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
