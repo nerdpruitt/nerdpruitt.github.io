@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nick Pruitt</title>
+
+    <meta name="description" content="Nick Pruitt, graphic designer, front end developer, and your new friend.">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    </script>
+</head>
+<body>
+    <main>
+        <article>
+            <header>
+                <figure class="fade-in is-hidden" data-section="1">
+                    <img src="/images/avatar.svg" alt="The angry yet lovely face of Nick Pruitt" width="256">
+                </figure>
+
+                <h1 class="fade-in is-hidden" data-section="2">My name is Nick&nbsp;Pruitt.</h1>
+            </header>
+
+            <p class="fade-in is-hidden" data-section="3">I&rsquo;m a web designer, as in I do graphic design and front end development for things on the internet. I have watched trends come and go over the past fifteen years, and I believe the best design and development solutions are found in focusing on solving problems and in common sense.</p>
+
+            <p class="fade-in is-hidden" data-section="4">A few of my favorite things include quality time with my three children, St. Thomas Aquinas, reading too many books at once, martial arts, coffee, cocktails, and constant doodling. I&rsquo;m infinitely curious and enjoy chasing topics ranging anywhere from Japanese pro wrestling to reading any and every piece of writing by G.K. Chesterton that I can find. I enjoy solving problems and creating things, and I plan to continue doing so for quite some time.</p>
+
+            <p class="fade-in is-hidden" data-section="5"><strong>Oh, and your internet isn&rsquo;t working.</strong></p>
+        </article>
+    </main>
+
+    <script src="/js/main.js" defer></script>
+
+    <script>
+        // Initialize the service worker
+        if (navigator && navigator.serviceWorker) {
+           navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
+</body>
+</html>
