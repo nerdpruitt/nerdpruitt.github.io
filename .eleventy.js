@@ -1,7 +1,7 @@
 module.exports = function(eleventyConfig) {
     // Copy css and js to the `_site` folder
-    eleventyConfig.addPassthroughCopy("./src/dist/css");
-    eleventyConfig.addPassthroughCopy("./src/dist/js");
+    eleventyConfig.addPassthroughCopy({"./src/dist/css": "assets/css" });
+    eleventyConfig.addPassthroughCopy({"./src/dist/js": "assets/js"});
 
     // Find and copy any image files, maintaining directory structure.
     eleventyConfig.addPassthroughCopy("./src/**/*.jpg");
