@@ -1,0 +1,68 @@
+@use '../functions' as _f;
+
+.dropcap::first-letter {
+    float: left;
+    font-family: var(--font-family-dropcap);
+    font-size: 3.25rem;
+    line-height: 1;
+    padding-right: 8px;
+}
+
+.columns {
+    @media (min-width: 781px) {
+        column-count: 2;
+        column-gap: var(--grid-column-gap);
+    }
+}
+
+.page-title {
+    font-family: var(--font-family-heading);
+    font-size: _f.rem(40);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-heading);
+    margin-bottom: 2rem;
+    max-width: _f.rem(868);
+}
+
+.section-title {
+    color: var(--red);
+    font-family: var(--font-family-heading);
+    font-size: _f.rem(40);
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--letter-spacing-caps);
+    line-height: var(--line-height-heading);
+    text-transform: uppercase;
+
+    // when the multi-column grid begins
+    @media (min-width: 781px) {
+        margin: 0.125em 0.5em 0;
+        writing-mode: vertical-lr;
+    }
+}
+
+.hd-2 {
+    font-family: var(--font-family-heading);
+    font-size: _f.rem(40);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-heading);
+}
+
+.hd-3 {
+    font-family: var(--font-family-heading);
+    font-size: _f.rem(30);
+    font-weight: var(--font-weight-black);
+    line-height: var(--line-height-heading);
+}
+
+.hd-sub {
+    font-family: var(--font-family-main);
+    font-size: _f.rem(24);
+    font-style: italic;
+    font-weight: var(--font-weight-light);
+}
+
+.resume {
+    p {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    {% include '../partials/head.liquid' %}
+
+    <link rel="stylesheet" href="/dist/css/home.css">
+
+    {% include '../partials/js-support.liquid' %}
+</head>
+
+<body class="home">
+    <nav class="nav-main" role="navigation">
+        <ul class="nav-main__list">
+            <li><a class="nav-main__link" href="{{ '/about' | url }}">about</a></li>
+            <li><a class="nav-main__link" href="{{ '/portfolio' | url }}">portfolio</a></li>
+            <li><a class="nav-main__link" href="{{ '/resume' | url }}">resume</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include '../partials/javascript.liquid' %}
+</body>
+</html>

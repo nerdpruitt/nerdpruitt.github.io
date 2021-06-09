@@ -1,0 +1,10 @@
+@use '../functions' as _f;
+
+:root {
+    --main-width: #{_f.rem(1200)};
+}
+
+// _f.rem(32)
+// _f.rem(40)
+// _f.rem(64)
+// _f.rem(120)

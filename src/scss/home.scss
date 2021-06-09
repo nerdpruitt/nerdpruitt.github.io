@@ -1,0 +1,197 @@
+@forward './config';
+
+@use './functions' as _f;
+
+$breakpoint-s: 572px;
+$breakpoint-m: 1000px;
+$breakpoint-l: 1200px;
+
+body {
+    background-color: var(--green);
+    font-family: var(--font-family-main);
+    padding: 1rem;
+
+
+    @media (min-width: $breakpoint-l) {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+// @media (min-width: $breakpoint-m) and (max-width: $breakpoint-l) {
+//     main {
+//         transform: rotate(45deg);
+//     }
+// }
+
+.profile {
+    float: left;
+
+    img {
+        float: left;
+        height: auto;
+        margin-bottom: _f.rem(40);
+        width: 100%;
+
+        @media (min-width: $breakpoint-s) {
+            width: 540px;
+        }
+    }
+
+    @media (min-width: $breakpoint-l) {
+        margin-bottom: 0;
+        margin-left: -740px;
+        margin-top: -300px;
+        height: 1610px;
+        width: 1430px;
+
+        img {
+            height: 1610px;
+            width: 1430px;
+        }
+    }
+
+    @media (min-width: $breakpoint-l) and (max-height: 758px) {
+        margin-top: -340px;
+    }
+}
+
+.text {
+    clear: left;
+
+    @media (min-width: 970px) {
+        left: 340px;
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+    }
+
+    @media (min-width: $breakpoint-l) {
+        left: 120px;
+        top: -290px;
+    }
+
+    @media (min-width: $breakpoint-l) and (max-height: 758px) {
+        left: 126px;
+        top: -320px;
+    }
+
+    &::before {
+        @media (min-width: $breakpoint-s) {
+            content: '';
+            float: left;
+            height: 607px;
+            shape-outside: polygon(0px 0px, 47px 28px, 108px 162px, 104px 219px, 120px 246px, 143px 271px, 143px 304px, 125px 316px, 148px 353px, 125px 363px, 125px 372px, 143px 382px, 148px 406px, 172px 428px, 183px 463px, 236px 494px, 236px 607px, 0px 607px);
+            width: 236px;
+        }
+
+        @media (min-width: $breakpoint-l) {
+            height: 1610px;
+            shape-outside: polygon(0px 0px, 124px 73px, 287px 430px, 275px 580px, 317px 652px, 380px 718px, 380px 805px, 332px 837px, 392px 935px, 332px 962px, 332px 988px, 380px 1012px, 392px 1078px, 456px 1134px, 486px 1227px, 625px 1310px, 625px 1610px, 0px 1610px);
+            width: 625px;
+        }
+    }
+
+    h1 {
+        color: var(--white);
+        font-family: var(--font-family-heading);
+        font-size: _f.rem(54);
+        font-weight: var(--font-weight-black);
+        line-height: 1.5;
+        letter-spacing: var(--letter-spacing-caps);
+        margin-bottom: 0;
+        margin-top: 200px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: _f.rem(24);
+        font-weight: var(--font-weight-regular);
+        line-height: 2;
+        margin-top: 0;
+
+        @media (min-width: $breakpoint-s) {
+            span {
+                display: block;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-l) {
+        h1 {
+            font-size: _f.rem(72);
+            margin-top: 600px;
+        }
+
+        p {
+            font-size: _f.rem(40);
+            line-height: 1.75;
+        }
+    }
+
+    @media (min-width: $breakpoint-l) and (max-height: 758px) {
+        h1 {
+            line-height: 1.5;
+            margin-top: 530px;
+        }
+    }
+}
+
+// ---------------------
+// Main site navigation
+// ---------------------
+
+.nav-main {
+    margin-bottom: _f.rem(40);
+
+    @media (min-width: $breakpoint-l) {
+        margin-bottom: 0;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        z-index: 10;
+    }
+}
+
+.nav-main__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    @media (min-width: $breakpoint-s) {
+        flex-direction: row;
+    }
+
+    > li {
+        margin-bottom: _f.rem(16);
+        margin-right: _f.rem(30);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav-main__link {
+    color: var(--white);
+    font-size: _f.rem(36);
+    position: relative;
+    text-decoration: none;
+    z-index: 5;
+
+    &::after {
+        background-color: var(--black);
+        bottom: 4px;
+        content: '';
+        left: -2px;
+        height: 4px;
+        position: absolute;
+        right: -2px;
+        z-index: -1;
+    }
+}
