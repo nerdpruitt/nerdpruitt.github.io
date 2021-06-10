@@ -210,6 +210,10 @@
     text-transform: uppercase;
     z-index: 50;
 
+    &:hover {
+        color: var(--black);
+    }
+
     @media (min-width: 1701px) {
         margin-top: -32px;
         position: fixed;

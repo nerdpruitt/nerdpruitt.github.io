@@ -54,12 +54,14 @@ pageTitle: Capacity Managed Tickets
             </div>
         </div>
 
-        <div class="grid-main u-margin--b-m">
+        <div class="grid-main">
             <div class="grid-main__gutter-l"></div>
-            <div class="columns">
-                <p>Vue is used in a somewhat unique way in our app. Rather than everything being built in Vue we use it sparingly, utilizing its most basic build on more complex components that warrant some kind of state management and data reactivity. These are implemented as separate instances of Vue, attached to certain DOM elements on the page. This introduced a problem in this case, however. I now had to keep a timer in sync on up to three different components on a single page, and I really didn’t want to add the weight and complexity of Vuex.</p>
+            <div class="grid-main__content">
+                <div class="columns">
+                    <p>Vue is used in a somewhat unique way in our app. Rather than everything being built in Vue we use it sparingly, utilizing its most basic build on more complex components that warrant some kind of state management and data reactivity. These are implemented as separate instances of Vue, attached to certain DOM elements on the page. This introduced a problem in this case, however. I now had to keep a timer in sync on up to three different components on a single page, and I really didn’t want to add the weight and complexity of Vuex.</p>
 
-                <p>That’s when I discovered `Vue.observable`. This is what powers the reactivity of the `data` object in a basic Vue component. For what I needed in this scenario it was a perfect fit. I made a simple data store file, wrapping the properties I needed to be reactive with `Vue.observable`. Then I imported it into the components where I needed the data in sync, and it worked like a charm.</p>
+                    <p>That’s when I discovered <span class="code">Vue.observable</span>. This is what powers the reactivity of the <span class="code">data</span> object in a basic Vue component. For what I needed in this scenario it was a perfect fit. I made a simple data store file, wrapping the properties I needed to be reactive with <span class="code">Vue.observable</span>. Then I imported it into the components where I needed the data in sync, and it worked like a charm.</p>
+                </div>
             </div>
         </div>
     </section>

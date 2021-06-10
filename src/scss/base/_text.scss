@@ -66,3 +66,12 @@
         margin-bottom: 2rem;
     }
 }
+
+.code {
+    background-color: #f2f2f2;
+    border: 1px solid #dcdcdc;
+    border-radius: 0.25em;
+    color: var(--red);
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    padding: 0 0.25em;
+}
