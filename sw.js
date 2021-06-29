@@ -5,7 +5,7 @@
 
 /* eslint-disable */
 
-var staticVersion = '0.0.4';
+var staticVersion = '0.0.5';
 var typekitVersion = '0.0.1';
 
 var staticFileCache = 'core-' + staticVersion;
