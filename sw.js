@@ -5,17 +5,20 @@
 
 /* eslint-disable */
 
-var version = '0.0.3';
-var staticFileCache = 'core-' + version;
-var typekitCache = 'typekit-0.0.1';
+var staticVersion = '0.0.4';
+var typekitVersion = '0.0.1';
+
+var staticFileCache = 'core-' + staticVersion;
+var typekitCache = 'typekit-' + typekitVersion;
 
 var cacheIDs = [staticFileCache, typekitCache];
 
-// // Font files
 var coreFiles = [
     './offline/index.html',
-    './assets/css/main.css',
-    './assets/js/main.js'
+    './assets/css/home.css' + '?v=' + staticVersion,
+    './assets/css/main.css' + '?v=' + staticVersion,
+    './assets/js/main.js' + '?v=' + staticVersion,
+    './images/profile.svg'
 ];
 
 // On install, cache some stuff
@@ -52,13 +55,13 @@ self.addEventListener('fetch', function (event) {
             fetch(request).then(function (response) {
                 return response;
             }).catch(function (error) {
-                return caches.match('offline.html');
+                return caches.match('./offline/index.html');
             })
         );
     }
 
     // Offline-first
-    if (request.url.includes('.typekit.net') || request.url.includes('images/avatar.svg') || request.url.includes('ibm-plex-') || request.url.includes('css/main.css') || request.url.includes('js/main.js')) {
+    if (request.url.includes('.typekit.net') || request.url.includes('images/profile.svg') || request.url.includes('css/main.css') || request.url.includes('js/main.js')) {
         event.respondWith(
             caches.match(request).then(function (response) {
                 return response || fetch(request).then(function (response) {

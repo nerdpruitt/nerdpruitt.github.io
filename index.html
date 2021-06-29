@@ -19,7 +19,7 @@
 
 <link rel="stylesheet" href="https://use.typekit.net/xyc1vcw.css">
 
-    <link rel="stylesheet" href="/assets/css/home.css?v=2021-06-29-00-19">
+    <link rel="stylesheet" href="/assets/css/home.css?v=0.0.4">
 
     <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
@@ -47,6 +47,14 @@
 
     </main>
 
-    
+
+    <script src="/assets/js/main.js?v=0.0.4" async></script>
+
+<script>
+    // Initialize the service worker
+    if (navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+</script>
 </body>
 </html>

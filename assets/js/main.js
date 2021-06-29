@@ -35,18 +35,62 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_greeting_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/greeting.js */ \"./src/js/modules/greeting.js\");\n/* harmony import */ var _modules_greeting_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_greeting_js__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack://nerdpruitt.github.io/./src/js/main.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/greeting.js":
+/*!************************************!*\
+  !*** ./src/js/modules/greeting.js ***!
+  \************************************/
 /***/ (() => {
 
-eval("console.log('yo');\n\n//# sourceURL=webpack://nerdpruitt.github.io/./src/js/main.js?");
+eval("/**\n * Prints a greeting to the developer console in cheeky fashion\n * @see\n * http://patorjk.com/software/taag/#p=display&f=ANSI%20Regular&t=HELLO!\n */\n\nconst hello = `\n-------------------------------------------\n\n\n██   ██ ███████ ██      ██       ██████  ██ \n██   ██ ██      ██      ██      ██    ██ ██ \n███████ █████   ██      ██      ██    ██ ██ \n██   ██ ██      ██      ██      ██    ██    \n██   ██ ███████ ███████ ███████  ██████  ██ \n                                            \n                                        \n-------------------------------------------\n\n`;\n\nconst msg = `I guess you’re here to look around and see how things were built! Have fun and pour one out for “View Source”.\n\n`\n\nconsole.log(`%c${hello}%c${msg}`, 'color: #E13C38;', 'font-size: 16px; font-family: monospace;');\n\n\n//# sourceURL=webpack://nerdpruitt.github.io/./src/js/modules/greeting.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -112,10 +156,9 @@ eval("console.log('yo');\n\n//# sourceURL=webpack://nerdpruitt.github.io/./src/j
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	__webpack_modules__["./src/js/main.js"](0, {}, __webpack_require__);
-/******/ 	__webpack_modules__["./src/scss/home.scss"](0, {}, __webpack_require__);
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/scss/main.scss"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_require__("./src/js/main.js");
+/******/ 	__webpack_require__("./src/scss/home.scss");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/scss/main.scss");
 /******/ 	
 /******/ })()
 ;
