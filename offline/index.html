@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nick Pruitt</title>
+<title>Nick Pruitt</title>
 
-    <meta name="description" content="Nick Pruitt, graphic designer, front end developer, and your new friend.">
+<meta name="description" content="Nick Pruitt, front end developer, graphic designer, and your new friend.">
 
-    <link rel="stylesheet" href="/css/main.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="https://use.typekit.net/xyc1vcw.css">
+
+    <link rel="stylesheet" href="/assets/css/main.css?v=2021-06-29-00-19">
 
     <script>
-        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
-    </script>
+    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+</script>
 </head>
+
 <body>
+    <header class="site-header">
+        
+            <div class="page-header page-header--bottom">
+                <h1 class="page-header__title">Offline</h1>
+            </div>
+        
+
+        <div class="nav-main-wrap">
+            <nav class="nav-main" role="navigation">
+    <a class="nav-main__logo" href="/">nickpruitt</a>
+    <ul class="nav-main__list">
+        <li><a class="nav-main__link" href="/about">about</a></li>
+        <li><a class="nav-main__link" href="/portfolio">portfolio</a></li>
+        <li><a class="nav-main__link" href="/resume">resume</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
     <main>
-        <article>
-            <header>
-                <figure class="fade-in is-hidden" data-section="1">
-                    <img src="/images/avatar.svg" alt="The angry yet lovely face of Nick Pruitt" width="256">
-                </figure>
+        
+<article class="grid-main">
+    <div class="grid-main__gutter-l">
+        <h3 class="section-title">Offline</h2>
+    </div>
+    <div class="grid-main__content grid-main__content--narrow">
+        <p class="dropcap">Your internet isn&rsquo;t working. Maybe you should go read a book instead?</p>
+    </div>
+</article>
 
-                <h1 class="fade-in is-hidden" data-section="2">My name is Nick&nbsp;Pruitt.</h1>
-            </header>
-
-            <p class="fade-in is-hidden" data-section="3">I&rsquo;m a web designer, as in I do graphic design and front end development for things on the internet. I have watched trends come and go over the past fifteen years, and I believe the best design and development solutions are found in focusing on solving problems and in common sense.</p>
-
-            <p class="fade-in is-hidden" data-section="4">A few of my favorite things include quality time with my three children, St. Thomas Aquinas, reading too many books at once, martial arts, coffee, cocktails, and constant doodling. I&rsquo;m infinitely curious and enjoy chasing topics ranging anywhere from Japanese pro wrestling to reading any and every piece of writing by G.K. Chesterton that I can find. I enjoy solving problems and creating things, and I plan to continue doing so for quite some time.</p>
-
-            <p class="fade-in is-hidden" data-section="5"><strong>Oh, and your internet isn&rsquo;t working.</strong></p>
-        </article>
     </main>
 
-    <script src="/js/main.js" defer></script>
+    <div class="site-footer-wrap">
+        <div class="site-footer__years">
+            <div class="site-footer__block block--hide" role="presentation"></div>
+            <footer class="site-footer">
+                <div class="site-footer__block" role="presentation"></div>
 
-    <script>
-        // Initialize the service worker
-        if (navigator && navigator.serviceWorker) {
-           navigator.serviceWorker.register('/sw.js');
-        }
-    </script>
+                <small class="site-footer__small">
+                    2005&ndash;2021
+                </small>
+
+                <div class="site-footer__block" role="presentation"></div>
+            </footer>
+            <div class="site-footer__block block--hide" role="presentation"></div>
+        </div>
+        <div class="site-footer__sarcastic-fine-print">
+            <div role="presentation"></div>
+            <small>
+                Made by Nick Pruitt. I guess my name being at the top of every page might have given that away.
+            </small>
+        </div>
+    </div>
+
+    <script src="/assets/js/main.js" async></script>
+
+<script>
+    // Initialize the service worker
+    if (navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+</script>
 </body>
 </html>

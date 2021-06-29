@@ -6,20 +6,16 @@
 /* eslint-disable */
 
 var version = '0.0.3';
-var coreCache = 'core-' + version;
+var staticFileCache = 'core-' + version;
+var typekitCache = 'typekit-0.0.1';
 
-var cacheIDs = [coreCache];
+var cacheIDs = [staticFileCache, typekitCache];
 
-// Font files
+// // Font files
 var coreFiles = [
-    './fonts/ibm-plex-mono-600italic.woff2',
-    './fonts/ibm-plex-mono-600italic.woff',
-    './fonts/ibm-plex-serif-regular.woff2',
-    './fonts/ibm-plex-serif-regular.woff',
-    './offline.html',
-    './css/main.css',
-    './js/main.js',
-    './images/avatar.svg'
+    './offline/index.html',
+    './assets/css/main.css',
+    './assets/js/main.js'
 ];
 
 // On install, cache some stuff
@@ -28,7 +24,7 @@ self.addEventListener('install', function (event) {
     self.skipWaiting();
 
     // Cache away!
-    event.waitUntil(caches.open(coreCache).then(function (cache) {
+    event.waitUntil(caches.open(staticFileCache).then(function (cache) {
         coreFiles.forEach(function (file) {
             cache.add(new Request(file));
         });
@@ -41,6 +37,8 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     // Get the request
     var request = event.request;
+
+    var requestURL = new URL(request.url);
 
     // Bug fix
     // https://stackoverflow.com/a/49719964
@@ -60,7 +58,7 @@ self.addEventListener('fetch', function (event) {
     }
 
     // Offline-first
-    if (request.url.includes('images/avatar.svg') || request.url.includes('ibm-plex-') || request.url.includes('css/main.css') || request.url.includes('js/main.js')) {
+    if (request.url.includes('.typekit.net') || request.url.includes('images/avatar.svg') || request.url.includes('ibm-plex-') || request.url.includes('css/main.css') || request.url.includes('js/main.js')) {
         event.respondWith(
             caches.match(request).then(function (response) {
                 return response || fetch(request).then(function (response) {
