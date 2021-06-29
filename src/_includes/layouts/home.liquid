@@ -4,7 +4,7 @@
 <head>
     {% include '../partials/head.liquid' %}
 
-    <link rel="stylesheet" href="/assets/css/home.css?v={{ "now" | date: "%Y-%m-%d-%H-%M" }}">
+    <link rel="stylesheet" href="/assets/css/home.css?v={% staticFileCache %}">
 
     {% include '../partials/js-support.liquid' %}
 </head>
@@ -22,8 +22,7 @@
         {{ content }}
     </main>
 
-    {% comment %}
+
     {% include '../partials/javascript.liquid' %}
-    {% endcomment %}
 </body>
 </html>

@@ -1,1 +1,1 @@
-console.log('yo');
+import './modules/greeting.js';
