@@ -15,7 +15,7 @@ module.exports = function(eleventyConfig) {
 
     // Current year for copyright
     eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-    eleventyConfig.addShortcode("staticFileCache", () => "0.0.5");
+    eleventyConfig.addShortcode("staticFileCache", () => "0.0.6");
 
     // Liquid options
     eleventyConfig.setLiquidOptions({
