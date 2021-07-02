@@ -23,19 +23,35 @@ $breakpoint-l: 1200px;
 // Figure Styles
 // ---------------------
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     background-color: var(--green);
     font-family: var(--font-family-main);
 }
 
+@media (min-width: $breakpoint-l) and (min-height: 681px) {
+    main {
+        display: grid;
+        min-height: 100%;
+        place-items: center;
+    }
+}
+
 .home-fig {
+    margin: 0 auto;
+    max-width: 900px;
     padding: var(--step-2) var(--step-4);
+    position: relative;
     width: 100%;
 
     &::before,
     &::after {
-        content: ''; /* 1 */
-        display: table; /* 2 */
+        content: '';
+        display: table;
     }
 
     &::after {

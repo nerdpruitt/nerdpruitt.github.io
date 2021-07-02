@@ -53,20 +53,33 @@ figure {
   --step-4: 2.5rem;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: var(--green);
   font-family: var(--font-family-main);
 }
 
+@media (min-width: 1200px) and (min-height: 681px) {
+  main {
+    display: grid;
+    min-height: 100%;
+    place-items: center;
+  }
+}
 .home-fig {
+  margin: 0 auto;
+  max-width: 900px;
   padding: var(--step-2) var(--step-4);
+  position: relative;
   width: 100%;
 }
 .home-fig::before, .home-fig::after {
   content: "";
-  /* 1 */
   display: table;
-  /* 2 */
 }
 .home-fig::after {
   clear: both;
