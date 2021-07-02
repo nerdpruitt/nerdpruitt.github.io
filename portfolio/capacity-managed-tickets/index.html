@@ -19,7 +19,7 @@
 
 <link rel="stylesheet" href="https://use.typekit.net/xyc1vcw.css">
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=0.0.6">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0.0.7">
 
     <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
@@ -49,7 +49,7 @@
     <main>
         
 <article>
-    <section class="grid-main u-margin--b-m">
+    <section class="grid-main u-margin--b-l">
         <div class="grid-main__gutter-l">
             <h2 class="section-title">Intro</h2>
         </div>
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section class="grid-main u-margin--b-m">
+    <section class="grid-main u-margin--b-l">
         <div class="grid-main__gutter-l">
             <h2 class="section-title">Goals</h2>
         </div>
@@ -71,7 +71,7 @@
         <div class="grid-main__gutter-l"></div>
         <div class="grid-main__content">
             <h3 class="hd-3">A New Type of Item</h3>
-            <div class="columns u-margin--b-m">
+            <div class="columns">
                 <p>The first part of the solution involved how to set capacity managed items apart and enable the new flow with choosing a date and time. I decided that first I would distinguish which items were capacity managed and which were our standard items through the verbiage on the button. Capacity managed items would say “Book Now” as opposed to “Add to Cart”. From there I would introduce an interstitial view in a modal to choose a date and time, and then add it to the cart. This introduced the need for one of my favorite parts of this project, creating a date picker.</p>
 
                 <p>Maybe I just haven’t found the right one, but I <strong>hate</strong> all the date pickers that I have ever used. You always run into some strange issue with injected styles or weird timezone or date formatting. I really just wanted something simple: pick a date and spit it out in the format the database needs. Because of this I decided to create my own Calendar widget component in Vue. What is interesting with a lot of self-contained widgets like this is that once you break down the problem into what you really need to pull it off&hellip;  it’s usually fairly straightforward to build. I was concerned that it would take a lot of time to make this, but really it went quickly. You go to the month you want, choose the date you want, and this sends the date to an endpoint that returns the available tickets for that day. Nice and easy.</p>
@@ -80,18 +80,18 @@
         <div class="grid-main__gutter-r"></div>
     </section>
 
-    <figure class="grid-img-full u-margin--b-m">
+    <figure class="grid-img-full u-margin--b-l">
         <img srcset="/images/portfolio/capacity/standard-capacity-item.jpg 1x, /images/portfolio/capacity/standard-capacity-item@2x.jpg 2x" src="/images/portfolio/capacity/standard-capacity-item.jpg" alt="">
         <figcaption class="grid-img__caption"><strong>Figure One:</strong> A standard store item is depicted on the left and a capacity managed one on the right.</figcaption>
     </figure>
 
-    <figure class="grid-img-full u-margin--b-m">
+    <figure class="grid-img-full u-margin--b-l">
         <img srcset="/images/portfolio/capacity/calendar.jpg 1x, /images/portfolio/capacity/calendar@2x.jpg 2x" src="/images/portfolio/capacity/calendar.jpg" alt="">
         <figcaption class="grid-img__caption"><strong>Figure Two:</strong> The calendar widget in action. You select a date on the left, and get a list of available times on the right.</figcaption>
     </figure>
 
     <section>
-        <div class="grid-main u-margin--b-m">
+        <div class="grid-main u-margin--b-s">
             <div class="grid-main__gutter-l"></div>
             <div class="grid-main__content grid-main__content--max">
                 <h3 class="hd-3">Custom Data Store</h3>
@@ -101,7 +101,7 @@
 
         <div class="grid-main">
             <div class="grid-main__gutter-l"></div>
-            <div class="grid-main__content">
+            <div class="grid-main__content u-margin--b-s">
                 <div class="columns">
                     <p>Vue is used in a somewhat unique way in our app. Rather than everything being built in Vue we use it sparingly, utilizing its most basic build on more complex components that warrant some kind of state management and data reactivity. These are implemented as separate instances of Vue, attached to certain DOM elements on the page. This introduced a problem in this case, however. I now had to keep a timer in sync on up to three different components on a single page, and I really didn’t want to add the weight and complexity of Vuex.</p>
 
@@ -119,17 +119,17 @@
         <div class="grid-main__gutter-r"></div>
     </section>
 
-    <figure class="grid-img-full u-margin--b-m">
+    <figure class="grid-img-full u-margin--b-l">
         <img srcset="/images/portfolio/capacity/timer.jpg 1x, /images/portfolio/capacity/timer@2x.jpg 2x" src="/images/portfolio/capacity/timer.jpg" alt="">
         <figcaption class="grid-img__caption"><strong>Figure Three:</strong> On the store item show page, the timers are shown with the item and in the header with cart button.</figcaption>
     </figure>
 
-    <figure class="grid-img-full u-margin--b-m">
+    <figure class="grid-img-full u-margin--b-l">
         <img srcset="/images/portfolio/capacity/expired.jpg 1x, /images/portfolio/capacity/expired@2x.jpg 2x" src="/images/portfolio/capacity/expired.jpg" alt="">
         <figcaption class="grid-img__caption"><strong>Figure Four:</strong> The expired state of the booking.</figcaption>
     </figure>
 
-    <hr class="u-margin--b-m">
+    <hr class="u-margin--b-l">
 
     <section class="grid-main u-margin--b-m">
         <div class="grid-main__gutter-l">
@@ -171,7 +171,7 @@
         </div>
     </div>
 
-    <script src="/assets/js/main.js?v=0.0.6" async></script>
+    <script src="/assets/js/main.js?v=0.0.7" async></script>
 
 <script>
     // Initialize the service worker

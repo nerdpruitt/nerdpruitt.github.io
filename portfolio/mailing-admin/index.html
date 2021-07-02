@@ -19,7 +19,7 @@
 
 <link rel="stylesheet" href="https://use.typekit.net/xyc1vcw.css">
 
-    <link rel="stylesheet" href="/assets/css/main.css?v=0.0.6">
+    <link rel="stylesheet" href="/assets/css/main.css?v=0.0.7">
 
     <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
@@ -49,7 +49,7 @@
     <main>
         
 <article>
-    <section class="grid-main u-margin--b-m">
+    <section class="grid-main u-margin--b-l">
         <div class="grid-main__gutter-l">
             <h2 class="section-title">Intro</h2>
         </div>
@@ -58,60 +58,58 @@
         </div>
     </section>
 
-    <section>
-        <div class="grid-main u-margin--b-m">
-            <div class="grid-main__gutter-l">
-                <h2 class="section-title">Goals</h2>
-            </div>
-            <div class="grid-main__content grid-main__content--max">
-                <p>There were two main problems that needed solving with this update. Number one, we needed to create an admin for managing campaigns and understanding how it coordinated with the mailing service we were using to actually send the final email. This needed a whole new business &ldquo;language&rdquo; developed around it so that new hires could intuitively understand the system as well as someone who had worked with it for years. Number two, we needed a way for someone with no HTML experience to be able to create custom HTML emails.</p>
-            </div>
+    <section class="grid-main u-margin--b-l">
+        <div class="grid-main__gutter-l">
+            <h2 class="section-title">Goals</h2>
         </div>
-
-        <div class="grid-main u-margin--b-m">
-            <div class="grid-main__gutter-l"></div>
-            <div class="grid-main__content">
-                <h3 class="hd-3">Template Development</h3>
-                <div class="columns">
-                    <p>The first step of this phase of the project was to build a modular system of HTML components that could be composed into a variety of HTML email layouts. I created a master responsive HTML email that included all of these base components, a sort of mini design system for all of our emails. It had to work across our testing suite of email clients (thanks Litmus!) without using media queries (thanks Gmail on Android!). Yes, it’s as gross and weird as it sounds to build responsive emails out of tables without media queries, but it&rsquo;s also surprisingly doable with a bit of planning.</p>
-
-                    <p>The next step was to create a way to both organize these components into templates and to allow our marketing team to enter content into these templates. I helped devise a system where each template has a corresponding set of JSON that says what content is required for that template. This JSON is then translated into a form by a Vue component for entering that content. Finally, there is a corresponding Blade template that reads the data created by the form and generates an HTML page. This is pulled into an iframe that is positioned by the form for an updated real time preview any time you save you work. The end result is being able to compose both templates and forms for powering the content in those templates.</p>
-                </div>
-            </div>
+        <div class="grid-main__content grid-main__content--max">
+            <p>There were two main problems that needed solving with this update. Number one, we needed to create an admin for managing campaigns and understanding how it coordinated with the mailing service we were using to actually send the final email. This needed a whole new business &ldquo;language&rdquo; developed around it so that new hires could intuitively understand the system as well as someone who had worked with it for years. Number two, we needed a way for someone with no HTML experience to be able to create custom HTML emails.</p>
         </div>
+    </section>
 
-        <figure class="grid-img-full u-margin--b-m">
-            <img srcset="/images/portfolio/mailing/template-editing.jpg 1x, /images/portfolio/mailing/template-editing@2x.jpg 2x" src="/images/portfolio/mailing/template-editing.jpg" alt="Template Editing">
-            <figcaption class="grid-img__caption"><strong>Figure One:</strong> An example of the template building screen with the save warning visible and the section being edited highlighted.</figcaption>
-        </figure>
+    <section class="grid-main u-margin--b-m">
+        <div class="grid-main__gutter-l"></div>
+        <div class="grid-main__content">
+            <h3 class="hd-3">Template Development</h3>
+            <div class="columns">
+                <p>The first step of this phase of the project was to build a modular system of HTML components that could be composed into a variety of HTML email layouts. I created a master responsive HTML email that included all of these base components, a sort of mini design system for all of our emails. It had to work across our testing suite of email clients (thanks Litmus!) without using media queries (thanks Gmail on Android!). Yes, it’s as gross and weird as it sounds to build responsive emails out of tables without media queries, but it&rsquo;s also surprisingly doable with a bit of planning.</p>
 
-        <div class="grid-main u-margin--b-m">
-            <div class="grid-main__gutter-l"></div>
-            <div class="grid-main__content grid-main__content--max">
-                <h3 class="hd-3">Attention to Detail</h3>
-                <p>I added warnings to let you know when there are unsaved changes and a prompt that alerts you if you try to leave the view (whether on purpose or accidentally) without saving. Some of these emails get pretty long also, so I have the iframe scroll to the section you’re editing and highlight it. As a last touch, I added a dropdown that allows you to select any of our clients and preview the email as that client to view any data driven customizations that would be made to the content. We even added the ability for the client to preview the email in one of our apps and approve it for their users before we send it!</p>
-            </div>
-        </div>
-
-        <div class="grid-main u-margin--b-m">
-            <div class="grid-main__gutter-l"></div>
-            <div class="grid-main__content">
-                <h3 class="hd-3">Admin Development</h3>
-                <div class="columns">
-                    <p>The next piece of this project was creating the admin, part of an internal SPA built with VueJS, to organize the templates into coordinated campaigns that we can send to clients. We have a pretty unique set of rules that control this, so I don’t want to divulge too much, but this system was at a place where it was hard to explain to anyone new joining the team. It was a methodology that grew organically over many years as the business grew. The legacy system also did not report how the campaigns were synced with the third party system we use to send the emails, so it was hard to know quickly if you had run into a snag with the process.</p>
-
-                    <p>The solution was to take a step back and assess how the pieces of the system fit together, and use this to create a shared language for the team to understand and communicate it to one another and to future hires. I sat down with the backend developer that was syncing this info with the our mailing service to hash out what to call everything. I then used the <a href="https://basecamp.com/shapeup/1.3-chapter-04#breadboarding">Breadboarding</a> methodology to rapidly work through UI options until we were satisfied. Finally, I built out the system of Vue components to power all the forms and views for creating campaigns, including controls to generate campaign sets from information such as client geographical data.</p>
-                </div>
+                <p>The next step was to create a way to both organize these components into templates and to allow our marketing team to enter content into these templates. I helped devise a system where each template has a corresponding set of JSON that says what content is required for that template. This JSON is then translated into a form by a Vue component for entering that content. Finally, there is a corresponding Blade template that reads the data created by the form and generates an HTML page. This is pulled into an iframe that is positioned by the form for an updated real time preview any time you save you work. The end result is being able to compose both templates and forms for powering the content in those templates.</p>
             </div>
         </div>
     </section>
 
-    <figure class="grid-img-full u-margin--b-m">
+    <figure class="grid-img-full u-margin--b-l">
+        <img srcset="/images/portfolio/mailing/template-editing.jpg 1x, /images/portfolio/mailing/template-editing@2x.jpg 2x" src="/images/portfolio/mailing/template-editing.jpg" alt="Template Editing">
+        <figcaption class="grid-img__caption"><strong>Figure One:</strong> An example of the template building screen with the save warning visible and the section being edited highlighted.</figcaption>
+    </figure>
+
+    <section class="grid-main u-margin--b-l">
+        <div class="grid-main__gutter-l"></div>
+        <div class="grid-main__content grid-main__content--max">
+            <h3 class="hd-3">Attention to Detail</h3>
+            <p>I added warnings to let you know when there are unsaved changes and a prompt that alerts you if you try to leave the view (whether on purpose or accidentally) without saving. Some of these emails get pretty long also, so I have the iframe scroll to the section you’re editing and highlight it. As a last touch, I added a dropdown that allows you to select any of our clients and preview the email as that client to view any data driven customizations that would be made to the content. We even added the ability for the client to preview the email in one of our apps and approve it for their users before we send it!</p>
+        </div>
+    </section>
+
+    <section class="grid-main u-margin--b-m">
+        <div class="grid-main__gutter-l"></div>
+        <div class="grid-main__content">
+            <h3 class="hd-3">Admin Development</h3>
+            <div class="columns">
+                <p>The next piece of this project was creating the admin, part of an internal SPA built with VueJS, to organize the templates into coordinated campaigns that we can send to clients. We have a pretty unique set of rules that control this, so I don’t want to divulge too much, but this system was at a place where it was hard to explain to anyone new joining the team. It was a methodology that grew organically over many years as the business grew. The legacy system also did not report how the campaigns were synced with the third party system we use to send the emails, so it was hard to know quickly if you had run into a snag with the process.</p>
+
+                <p>The solution was to take a step back and assess how the pieces of the system fit together, and use this to create a shared language for the team to understand and communicate it to one another and to future hires. I sat down with the backend developer that was syncing this info with the our mailing service to hash out what to call everything. I then used the <a href="https://basecamp.com/shapeup/1.3-chapter-04#breadboarding">Breadboarding</a> methodology to rapidly work through UI options until we were satisfied. Finally, I built out the system of Vue components to power all the forms and views for creating campaigns, including controls to generate campaign sets from information such as client geographical data.</p>
+            </div>
+        </div>
+    </section>
+
+    <figure class="grid-img-full u-margin--b-l">
         <img srcset="/images/portfolio/mailing/campaign.jpg 1x, /images/portfolio/mailing/campaign@2x.jpg " src="/images/portfolio/mailing/campaign.jpg" alt="Campaign Dashbard">
         <figcaption class="grid-img__caption"><strong>Figure Two:</strong> An example of a campaign dashboard.</figcaption>
     </figure>
 
-    <hr class="u-margin--b-m">
+    <hr class="u-margin--b-l">
 
     <section class="grid-main u-margin--b-m">
         <div class="grid-main__gutter-l">
@@ -152,7 +150,7 @@
         </div>
     </div>
 
-    <script src="/assets/js/main.js?v=0.0.6" async></script>
+    <script src="/assets/js/main.js?v=0.0.7" async></script>
 
 <script>
     // Initialize the service worker
