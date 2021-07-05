@@ -3,7 +3,7 @@
 .site-header {
     display: flex;
     flex-direction: column;
-    margin: 0 auto _f.rem(64);
+    margin: 0 auto var(--spacing-step-5);
     max-width: var(--main-width);
     width: 100%;
 
@@ -24,10 +24,10 @@
 // ---------------------
 .nav-main {
     background-color: var(--green);
-    padding: _f.rem(16) _f.rem(20);
+    padding: var(--spacing-step-1) var(--spacing-step-2);
 
     @media (min-width: 781px) {
-        padding: _f.rem(32) _f.rem(40);
+        padding: var(--spacing-step-3) var(--spacing-step-4);
     }
 }
 
@@ -53,10 +53,10 @@
     }
 
     > li {
-        margin-right: _f.rem(30);
+        margin-right: var(--spacing-step-3);
 
         @media (min-width: 781px) {
-            margin-bottom: _f.rem(16);
+            margin-bottom: var(--spacing-step-1);
             margin-right: 0;
         }
 
@@ -91,11 +91,11 @@
 // ---------------------
 
 .page-header {
-    padding-top: _f.rem(40);
+    padding-top: var(--spacing-step-4);
 
     @media (min-width: 481px) {
         display: grid;
-        grid-column-gap: _f.rem(40);
+        grid-column-gap: var(--spacing-step-4);
         grid-template-columns: auto 1fr;
     }
 

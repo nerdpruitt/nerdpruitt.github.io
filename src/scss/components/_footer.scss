@@ -3,10 +3,10 @@
 .site-footer-wrap {
     clear: both;
     display: grid;
-    grid-gap: _f.rem(40);
+    grid-gap: var(--spacing-step-4);
     grid-template-rows: auto auto;
-    padding-bottom: _f.rem(40);
-    padding-top: _f.rem(120);
+    padding-bottom: var(--spacing-step-4);
+    padding-top: var(--spacing-step-7);
 }
 
 .site-footer__years {
@@ -20,8 +20,8 @@
 
 .site-footer {
     display: grid;
-    grid-gap: _f.rem(40);
-    grid-template-columns: _f.rem(40) auto 1fr;
+    grid-gap: var(--spacing-step-4);
+    grid-template-columns: var(--spacing-step-4) auto 1fr;
 
     @media (min-width: 901px) {
         grid-template-columns: minmax(auto, _f.rem(407)) auto 1fr;
@@ -41,13 +41,13 @@
 
     &::before {
         background-color: var(--yellow);
-        height: _f.rem(120);
-        bottom: _f.rem(72);
+        height: var(--spacing-step-7);
+        bottom: var(--spacing-step-6);
     }
 
     &::after {
         background-color: var(--black);
-        height: _f.rem(32);
+        height: var(--spacing-step-3);
         bottom: 0;
     }
 
@@ -74,13 +74,13 @@
 .site-footer__sarcastic-fine-print {
     display: grid;
     grid-row: 2 / 3;
-    grid-template-columns: _f.rem(40) 1fr;
+    grid-template-columns: var(--spacing-step-4) 1fr;
     margin: 0 auto;
     max-width: var(--main-width);
     width: 100%;
 
     @media (min-width: 901px) {
-        grid-gap: _f.rem(40);
+        grid-gap: var(--spacing-step-4);
         grid-template-columns: minmax(auto, _f.rem(407)) minmax(auto, _f.rem(500));
     }
 }

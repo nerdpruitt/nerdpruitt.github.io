@@ -16,11 +16,12 @@
 :root {
   --main-width: 75rem;
   --spacing-step-1: 1rem;
-  --spacing-step-2: 2rem;
-  --spacing-step-3: 2.5rem;
-  --spacing-step-4: 4rem;
-  --spacing-step-5: 4.5rem;
-  --spacing-step-6: 7.5rem;
+  --spacing-step-2: 1.5rem;
+  --spacing-step-3: 2rem;
+  --spacing-step-4: 2.5rem;
+  --spacing-step-5: 4rem;
+  --spacing-step-6: 4.5rem;
+  --spacing-step-7: 7.5rem;
 }
 
 :root {
@@ -59,13 +60,6 @@ figure {
   padding: 0;
 }
 
-:root {
-  --step-1: 1rem;
-  --step-2: 1.5rem;
-  --step-3: 2rem;
-  --step-4: 2.5rem;
-}
-
 html,
 body {
   height: 100%;
@@ -86,7 +80,7 @@ body {
 .home-fig {
   margin: 0 auto;
   max-width: 900px;
-  padding: var(--step-2) var(--step-4);
+  padding: var(--spacing-step-2) var(--spacing-step-4);
   position: relative;
   width: 100%;
 }
@@ -104,7 +98,7 @@ body {
 .home-fig__profile img {
   float: left;
   height: auto;
-  margin-bottom: var(--step-2);
+  margin-bottom: var(--spacing-step-2);
   width: 100%;
 }
 @media (min-width: 572px) {
@@ -146,7 +140,7 @@ body {
   text-transform: uppercase;
 }
 .home-fig__caption p {
-  font-size: var(--step-2);
+  font-size: var(--font-step-2);
   font-weight: var(--font-weight-regular);
   line-height: 2;
   margin-top: 0;
@@ -185,8 +179,8 @@ body {
   }
 }
 .nav-main__list > li {
-  margin-bottom: var(--step-1);
-  margin-right: var(--step-3);
+  margin-bottom: var(--spacing-step-1);
+  margin-right: var(--spacing-step-3);
 }
 .nav-main__list > li:last-child {
   margin-bottom: 0;

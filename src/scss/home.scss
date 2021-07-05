@@ -11,13 +11,6 @@ $breakpoint-s: 572px;
 $breakpoint-m: 1000px;
 $breakpoint-l: 1200px;
 
-:root {
-    --step-1: #{_f.rem(16)};
-    --step-2: #{_f.rem(24)};
-    --step-3: #{_f.rem(32)};
-    --step-4: #{_f.rem(40)};
-}
-
 
 // ---------------------
 // Figure Styles
@@ -44,7 +37,7 @@ body {
 .home-fig {
     margin: 0 auto;
     max-width: 900px;
-    padding: var(--step-2) var(--step-4);
+    padding: var(--spacing-step-2) var(--spacing-step-4);
     position: relative;
     width: 100%;
 
@@ -65,7 +58,7 @@ body {
     img {
         float: left;
         height: auto;
-        margin-bottom: var(--step-2);
+        margin-bottom: var(--spacing-step-2);
         width: 100%;
 
         @media (min-width: $breakpoint-s) {
@@ -110,7 +103,7 @@ body {
     }
 
     p {
-        font-size: var(--step-2);
+        font-size: var(--font-step-2);
         font-weight: var(--font-weight-regular);
         line-height: 2;
         margin-top: 0;
@@ -153,8 +146,8 @@ body {
     }
 
     > li {
-        margin-bottom: var(--step-1);
-        margin-right: var(--step-3);
+        margin-bottom: var(--spacing-step-1);
+        margin-right: var(--spacing-step-3);
 
         &:last-child {
             margin-bottom: 0;

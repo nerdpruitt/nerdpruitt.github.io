@@ -209,7 +209,7 @@
     font-size: var(--font-step-5);
     display: inline-flex;
     letter-spacing: var(--letter-spacing-caps);
-    margin-top: _f.rem(64);
+    margin-top: var(--spacing-step-5);
     text-decoration: none;
     text-transform: uppercase;
     z-index: 50;
