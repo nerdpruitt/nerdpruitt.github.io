@@ -7,3 +7,14 @@
 @function rem($target, $context: 16) {
     @return ($target / $context) * 1rem;
 }
+
+
+// -------------------------------------------------------
+// Convert number to ems
+// -------------------------------------------------------
+// default context is default browser font size of 16
+// -------------------------------------------------------
+
+@function em($target, $context: 16) {
+    @return ($target / $context) * 1em;
+}

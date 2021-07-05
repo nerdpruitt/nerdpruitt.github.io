@@ -1,5 +1,30 @@
 @use '../functions' as _f;
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+ol:not([class]),
+ul:not([class]),
+dl:not([class]) {
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    + p {
+        text-indent: 1.5em;
+    }
+}
+
+hr {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
 .dropcap::first-letter {
     float: left;
     font-family: var(--font-family-dropcap);

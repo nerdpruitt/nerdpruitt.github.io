@@ -179,6 +179,10 @@
     margin-right: auto;
     max-width: var(--main-width);
 
+    @media (max-width: #{_f.em(1232, 16)}) {
+        padding: 0 1rem;
+    }
+
     img {
         border: 1px solid var(--black);
         height: auto;

@@ -5,6 +5,7 @@
     flex-direction: column;
     margin: 0 auto _f.rem(64);
     max-width: var(--main-width);
+    width: 100%;
 
     @media (max-width: 780px) {
         .nav-main-wrap {
@@ -141,7 +142,7 @@
         margin: 0;
 
         @media (min-width: 781px) {
-            font-size: _f.rem(54);
+            font-size: var(--font-step-6);
         }
     }
 }

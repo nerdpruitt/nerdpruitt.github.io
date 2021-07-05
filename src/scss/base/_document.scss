@@ -1,0 +1,23 @@
+@use '../functions' as _f;
+
+body,
+html {
+    min-height: calc(100vh - 0.5rem);
+}
+
+html {
+    background-color: var(--green);
+}
+
+body {
+    background-color: var(--main-bg-color);
+    border-radius: 0.25rem;
+    color: var(--black);
+    display: grid;
+    font-family: var(--font-family-main);
+    font-size: var(--font-step-1);
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    line-height: 1.5;
+    margin: 0.25rem;
+}

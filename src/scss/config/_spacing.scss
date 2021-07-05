@@ -1,10 +1,14 @@
 @use '../functions' as _f;
 
 :root {
+    // Dimensions
     --main-width: #{_f.rem(1200)};
-}
 
-// _f.rem(32)
-// _f.rem(40)
-// _f.rem(64)
-// _f.rem(120)
+    // Spacing
+    --spacing-step-1: _f.rem(16);
+    --spacing-step-2: _f.rem(32);
+    --spacing-step-3: _f.rem(40);
+    --spacing-step-4: _f.rem(64);
+    --spacing-step-5: _f.rem(72);
+    --spacing-step-6: _f.rem(120);
+}

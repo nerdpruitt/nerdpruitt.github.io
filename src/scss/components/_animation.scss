@@ -1,0 +1,8 @@
+.js .fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.js .is-hidden {
+    opacity: 0;
+}

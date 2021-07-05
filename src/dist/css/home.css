@@ -15,6 +15,12 @@
 
 :root {
   --main-width: 75rem;
+  --spacing-step-1: _f.rem(16);
+  --spacing-step-2: _f.rem(32);
+  --spacing-step-3: _f.rem(40);
+  --spacing-step-4: _f.rem(64);
+  --spacing-step-5: _f.rem(72);
+  --spacing-step-6: _f.rem(120);
 }
 
 :root {
@@ -27,6 +33,13 @@
   --font-weight-black: 800;
   --line-height-heading: 1;
   --letter-spacing-caps: 0.025em;
+  --font-step-1: _f.rem(18);
+  --font-step-2: _f.rem(24);
+  --font-step-3: _f.rem(30);
+  --font-step-4: _f.rem(36);
+  --font-step-5: _f.rem(40);
+  --font-step-6: _f.rem(54);
+  --font-step-7: _f.rem(64);
 }
 
 *,
