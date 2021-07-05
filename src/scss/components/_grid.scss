@@ -169,7 +169,7 @@
 .grid-img__caption {
     clear: both;
     color: var(--caption-color);
-    font-size: _f.rem(18);
+    font-size: var(--font-step-1);
     font-weight: var(--font-weight-light);
     padding-top: 1rem;
 }
@@ -206,7 +206,7 @@
     align-items: center;
     color: var(--red);
     font-family: var(--font-family-heading);
-    font-size: _f.rem(40);
+    font-size: var(--font-step-5);
     display: inline-flex;
     letter-spacing: var(--letter-spacing-caps);
     margin-top: _f.rem(64);

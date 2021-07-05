@@ -42,7 +42,7 @@ hr {
 
 .page-title {
     font-family: var(--font-family-heading);
-    font-size: _f.rem(40);
+    font-size: var(--font-step-5);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
     margin-bottom: 2rem;
@@ -52,7 +52,7 @@ hr {
 .section-title {
     color: var(--red);
     font-family: var(--font-family-heading);
-    font-size: _f.rem(40);
+    font-size: var(--font-step-5);
     font-weight: var(--font-weight-black);
     letter-spacing: var(--letter-spacing-caps);
     line-height: var(--line-height-heading);
@@ -67,21 +67,21 @@ hr {
 
 .hd-2 {
     font-family: var(--font-family-heading);
-    font-size: _f.rem(40);
+    font-size: var(--font-step-5);
     font-weight: var(--font-weight-black);
     line-height: var(--line-height-heading);
 }
 
 .hd-3 {
     font-family: var(--font-family-heading);
-    font-size: _f.rem(30);
+    font-size: var(--font-step-3);
     font-weight: var(--font-weight-black);
     line-height: var(--line-height-heading);
 }
 
 .hd-sub {
     font-family: var(--font-family-main);
-    font-size: _f.rem(24);
+    font-size: var(--font-step-2);
     font-style: italic;
     font-weight: var(--font-weight-light);
 }

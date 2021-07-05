@@ -34,7 +34,7 @@
 .nav-main__logo {
     color: var(--white);
     display: block;
-    font-size: _f.rem(36);
+    font-size: var(--font-step-4);
     font-weight: var(--font-weight-black);
     line-height: 1;
     margin-bottom: 1rem;
@@ -68,7 +68,7 @@
 
 .nav-main__link {
     color: var(--white);
-    font-size: _f.rem(24);
+    font-size: var(--font-step-2);
     position: relative;
     text-decoration: none;
     z-index: 5;
@@ -115,7 +115,7 @@
         align-self: end;
         color: var(--red);
         font-family: var(--font-family-heading);
-        font-size: _f.rem(64);
+        font-size: var(--font-step-7);
         font-weight: var(--font-weight-black);
         letter-spacing: var(--letter-spacing-caps);
         line-height: var(--line-height-heading);
@@ -136,7 +136,7 @@
 
     .page-header__title {
         align-self: end;
-        font-size: _f.rem(40);
+        font-size: var(--font-step-5);
         font-weight: var(--font-weight-black);
         line-height: var(--line-height-heading);
         margin: 0;

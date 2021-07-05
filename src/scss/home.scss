@@ -100,7 +100,7 @@ body {
     h1 {
         color: var(--white);
         font-family: var(--font-family-heading);
-        font-size: _f.rem(54);
+        font-size: var(--font-step-6);
         font-weight: var(--font-weight-black);
         line-height: 1.25;
         letter-spacing: var(--letter-spacing-caps);
@@ -164,7 +164,7 @@ body {
 
 .nav-main__link {
     color: var(--white);
-    font-size: _f.rem(36);
+    font-size: var(--font-step-4);
     position: relative;
     text-decoration: none;
     z-index: 5;

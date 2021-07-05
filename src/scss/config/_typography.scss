@@ -1,3 +1,5 @@
+@use '../functions' as _f;
+
 :root {
     // Font family
     --font-family-dropcap: interstate-condensed, sans-serif;
@@ -14,11 +16,11 @@
     --letter-spacing-caps: 0.025em;
 
     // Sizes
-    --font-step-1: _f.rem(18);
-    --font-step-2: _f.rem(24);
-    --font-step-3: _f.rem(30);
-    --font-step-4: _f.rem(36);
-    --font-step-5: _f.rem(40);
-    --font-step-6: _f.rem(54);
-    --font-step-7: _f.rem(64);
+    --font-step-1: #{_f.rem(18)};
+    --font-step-2: #{_f.rem(24)};
+    --font-step-3: #{_f.rem(30)};
+    --font-step-4: #{_f.rem(36)};
+    --font-step-5: #{_f.rem(40)};
+    --font-step-6: #{_f.rem(54)};
+    --font-step-7: #{_f.rem(64)};
 }

@@ -15,12 +15,12 @@
 
 :root {
   --main-width: 75rem;
-  --spacing-step-1: _f.rem(16);
-  --spacing-step-2: _f.rem(32);
-  --spacing-step-3: _f.rem(40);
-  --spacing-step-4: _f.rem(64);
-  --spacing-step-5: _f.rem(72);
-  --spacing-step-6: _f.rem(120);
+  --spacing-step-1: 1rem;
+  --spacing-step-2: 2rem;
+  --spacing-step-3: 2.5rem;
+  --spacing-step-4: 4rem;
+  --spacing-step-5: 4.5rem;
+  --spacing-step-6: 7.5rem;
 }
 
 :root {
@@ -33,13 +33,13 @@
   --font-weight-black: 800;
   --line-height-heading: 1;
   --letter-spacing-caps: 0.025em;
-  --font-step-1: _f.rem(18);
-  --font-step-2: _f.rem(24);
-  --font-step-3: _f.rem(30);
-  --font-step-4: _f.rem(36);
-  --font-step-5: _f.rem(40);
-  --font-step-6: _f.rem(54);
-  --font-step-7: _f.rem(64);
+  --font-step-1: 1.125rem;
+  --font-step-2: 1.5rem;
+  --font-step-3: 1.875rem;
+  --font-step-4: 2.25rem;
+  --font-step-5: 2.5rem;
+  --font-step-6: 3.375rem;
+  --font-step-7: 4rem;
 }
 
 *,
@@ -122,7 +122,7 @@ hr {
 
 .page-title {
   font-family: var(--font-family-heading);
-  font-size: 2.5rem;
+  font-size: var(--font-step-5);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   margin-bottom: 2rem;
@@ -132,7 +132,7 @@ hr {
 .section-title {
   color: var(--red);
   font-family: var(--font-family-heading);
-  font-size: 2.5rem;
+  font-size: var(--font-step-5);
   font-weight: var(--font-weight-black);
   letter-spacing: var(--letter-spacing-caps);
   line-height: var(--line-height-heading);
@@ -147,21 +147,21 @@ hr {
 
 .hd-2 {
   font-family: var(--font-family-heading);
-  font-size: 2.5rem;
+  font-size: var(--font-step-5);
   font-weight: var(--font-weight-black);
   line-height: var(--line-height-heading);
 }
 
 .hd-3 {
   font-family: var(--font-family-heading);
-  font-size: 1.875rem;
+  font-size: var(--font-step-3);
   font-weight: var(--font-weight-black);
   line-height: var(--line-height-heading);
 }
 
 .hd-sub {
   font-family: var(--font-family-main);
-  font-size: 1.5rem;
+  font-size: var(--font-step-2);
   font-style: italic;
   font-weight: var(--font-weight-light);
 }
@@ -259,7 +259,7 @@ hr {
   align-self: end;
   color: var(--red);
   font-family: var(--font-family-heading);
-  font-size: 4rem;
+  font-size: var(--font-step-7);
   font-weight: var(--font-weight-black);
   letter-spacing: var(--letter-spacing-caps);
   line-height: var(--line-height-heading);
@@ -424,7 +424,7 @@ hr {
 .grid-img__caption {
   clear: both;
   color: var(--caption-color);
-  font-size: 1.125rem;
+  font-size: var(--font-step-1);
   font-weight: var(--font-weight-light);
   padding-top: 1rem;
 }
@@ -458,7 +458,7 @@ hr {
   align-items: center;
   color: var(--red);
   font-family: var(--font-family-heading);
-  font-size: 2.5rem;
+  font-size: var(--font-step-5);
   display: inline-flex;
   letter-spacing: var(--letter-spacing-caps);
   margin-top: 4rem;
@@ -565,7 +565,7 @@ hr {
 .nav-main__logo {
   color: var(--white);
   display: block;
-  font-size: 2.25rem;
+  font-size: var(--font-step-4);
   font-weight: var(--font-weight-black);
   line-height: 1;
   margin-bottom: 1rem;
@@ -599,7 +599,7 @@ hr {
 
 .nav-main__link {
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: var(--font-step-2);
   position: relative;
   text-decoration: none;
   z-index: 5;
@@ -641,7 +641,7 @@ hr {
   align-self: end;
   color: var(--red);
   font-family: var(--font-family-heading);
-  font-size: 4rem;
+  font-size: var(--font-step-7);
   font-weight: var(--font-weight-black);
   letter-spacing: var(--letter-spacing-caps);
   line-height: var(--line-height-heading);
@@ -662,7 +662,7 @@ hr {
 }
 .page-header--bottom .page-header__title {
   align-self: end;
-  font-size: 2.5rem;
+  font-size: var(--font-step-5);
   font-weight: var(--font-weight-black);
   line-height: var(--line-height-heading);
   margin: 0;
