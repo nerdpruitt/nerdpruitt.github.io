@@ -19,7 +19,7 @@ const hello = `
 
 `;
 
-const msg = `I guess you’re here to look around and see how things were built! Have fun and pour one out for “View Source”.
+const msg = `I guess you’re here to look around and see how things were built! Have fun and pour one out for “View Source”. You can also view it all here if you’d prefer: https://github.com/nerdpruitt/nerdpruitt.github.io.
 
 `
 
