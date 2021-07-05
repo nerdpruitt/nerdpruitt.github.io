@@ -15,6 +15,13 @@
 
 :root {
   --main-width: 75rem;
+  --spacing-step-1: 1rem;
+  --spacing-step-2: 1.5rem;
+  --spacing-step-3: 2rem;
+  --spacing-step-4: 2.5rem;
+  --spacing-step-5: 4rem;
+  --spacing-step-6: 4.5rem;
+  --spacing-step-7: 7.5rem;
 }
 
 :root {
@@ -27,6 +34,13 @@
   --font-weight-black: 800;
   --line-height-heading: 1;
   --letter-spacing-caps: 0.025em;
+  --font-step-1: 1.125rem;
+  --font-step-2: 1.5rem;
+  --font-step-3: 1.875rem;
+  --font-step-4: 2.25rem;
+  --font-step-5: 2.5rem;
+  --font-step-6: 3.375rem;
+  --font-step-7: 4rem;
 }
 
 *,
@@ -44,13 +58,6 @@ html,
 figure {
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --step-1: 1rem;
-  --step-2: 1.5rem;
-  --step-3: 2rem;
-  --step-4: 2.5rem;
 }
 
 html,
@@ -73,7 +80,7 @@ body {
 .home-fig {
   margin: 0 auto;
   max-width: 900px;
-  padding: var(--step-2) var(--step-4);
+  padding: var(--spacing-step-2) var(--spacing-step-4);
   position: relative;
   width: 100%;
 }
@@ -91,7 +98,7 @@ body {
 .home-fig__profile img {
   float: left;
   height: auto;
-  margin-bottom: var(--step-2);
+  margin-bottom: var(--spacing-step-2);
   width: 100%;
 }
 @media (min-width: 572px) {
@@ -124,7 +131,7 @@ body {
 .home-fig__caption h1 {
   color: var(--white);
   font-family: var(--font-family-heading);
-  font-size: 3.375rem;
+  font-size: var(--font-step-6);
   font-weight: var(--font-weight-black);
   line-height: 1.25;
   letter-spacing: var(--letter-spacing-caps);
@@ -133,7 +140,7 @@ body {
   text-transform: uppercase;
 }
 .home-fig__caption p {
-  font-size: var(--step-2);
+  font-size: var(--font-step-2);
   font-weight: var(--font-weight-regular);
   line-height: 2;
   margin-top: 0;
@@ -172,8 +179,8 @@ body {
   }
 }
 .nav-main__list > li {
-  margin-bottom: var(--step-1);
-  margin-right: var(--step-3);
+  margin-bottom: var(--spacing-step-1);
+  margin-right: var(--spacing-step-3);
 }
 .nav-main__list > li:last-child {
   margin-bottom: 0;
@@ -181,7 +188,7 @@ body {
 
 .nav-main__link {
   color: var(--white);
-  font-size: 2.25rem;
+  font-size: var(--font-step-4);
   position: relative;
   text-decoration: none;
   z-index: 5;
