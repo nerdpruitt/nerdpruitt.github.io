@@ -23,7 +23,7 @@ pageTitle: Capacity Managed Tickets
     </section>
 
     <section class="grid-main u-margin--b-m">
-        <div class="grid-main__gutter-l"></div>
+        <div class="grid-main__gutter-l" aria-hidden="true"></div>
         <div class="grid-main__content">
             <h3 class="hd-3">A New Type of Item</h3>
             <div class="columns">
@@ -47,7 +47,7 @@ pageTitle: Capacity Managed Tickets
 
     <section>
         <div class="grid-main u-margin--b-s">
-            <div class="grid-main__gutter-l"></div>
+            <div class="grid-main__gutter-l" aria-hidden="true"></div>
             <div class="grid-main__content grid-main__content--max">
                 <h3 class="hd-3">Custom Data Store</h3>
                 <p>The next big piece of functionality was tracking how long the ticket for the selected date and time is valid. I was given a requirement of displaying a countdown timer in several places. One would live on the controls you used to add the item itself, one would be with the cart button in our main header, and one would be on the item in our Order Summary table in the checkout flow.</p>
@@ -55,7 +55,7 @@ pageTitle: Capacity Managed Tickets
         </div>
 
         <div class="grid-main">
-            <div class="grid-main__gutter-l"></div>
+            <div class="grid-main__gutter-l" aria-hidden="true"></div>
             <div class="grid-main__content u-margin--b-s">
                 <div class="columns">
                     <p>Vue is used in a somewhat unique way in our app. Rather than everything being built in Vue we use it sparingly, utilizing its most basic build on more complex components that warrant some kind of state management and data reactivity. These are implemented as separate instances of Vue, attached to certain DOM elements on the page. This introduced a problem in this case, however. I now had to keep a timer in sync on up to three different components on a single page, and I really didn’t want to add the weight and complexity of Vuex.</p>
@@ -67,7 +67,7 @@ pageTitle: Capacity Managed Tickets
     </section>
 
     <section class="grid-main u-margin--b-m">
-        <div class="grid-main__gutter-l"></div>
+        <div class="grid-main__gutter-l" aria-hidden="true"></div>
         <div class="grid-main__content grid-main__content--max">
             <p>Finally, when the timer hits zero, I introduced a “refresh” state. A button with simple instructions underneath appears, so you can quickly check to see if your desired time is still available. If it is, you get a fresh timer and carry on with your shopping. If it isn’t, you are presented with the date picker modal again and a message explaining that tickets are sold and you’ll have to find a new time.</p>
         </div>
