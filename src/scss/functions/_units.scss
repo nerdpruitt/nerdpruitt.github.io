@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // -------------------------------------------------------
 // Convert number to rems
 // -------------------------------------------------------
@@ -5,7 +7,7 @@
 // -------------------------------------------------------
 
 @function rem($target, $context: 16) {
-    @return ($target / $context) * 1rem;
+    @return math.div($target, $context) * 1rem;
 }
 
 
@@ -16,5 +18,5 @@
 // -------------------------------------------------------
 
 @function em($target, $context: 16) {
-    @return ($target / $context) * 1em;
+    @return math.div($target, $context) * 1em;
 }

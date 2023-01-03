@@ -1,14 +1,14 @@
 {
     "name": "nerdpruitt.github.io",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
     "main": "sw.js",
     "scripts": {
         "clean": "rimraf _site",
-        "serve:webpack": "webpack --mode development --watch",
         "serve:eleventy": "ELEVENTY_ENV=development eleventy --serve",
         "serve": "npm-run-all clean --parallel serve:*",
-        "build:webpack": "webpack --mode production",
+        "build:css": "sass --update --style=compressed src/scss/home.scss:src/dist/css/home.css src/scss/main.scss:src/dist/css/main.css",
+        "build:js": "esbuild src/js/main.js --bundle --minify --outfile=src/dist/js/main.js",
         "build:eleventy": "ELEVENTY_ENV=production eleventy",
         "build": "run-s clean build:*"
     },
@@ -24,18 +24,11 @@
     },
     "homepage": "https://github.com/nerdpruitt/nerdpruitt.github.io#readme",
     "devDependencies": {
-        "@11ty/eleventy": "^0.12.1",
-        "css-loader": "^5.2.4",
-        "extract-loader": "^5.1.0",
-        "fibers": "^5.0.0",
-        "file-loader": "^6.2.0",
-        "mini-css-extract-plugin": "^1.6.0",
+        "@11ty/eleventy": "^1.0.2",
+        "chokidar-cli": "^3.0.0",
+        "esbuild": "^0.16.12",
         "npm-run-all": "^4.1.5",
         "rimraf": "^3.0.2",
-        "sass": "^1.32.13",
-        "sass-loader": "^11.1.1",
-        "style-loader": "^2.0.0",
-        "webpack": "^5.36.0",
-        "webpack-cli": "^4.6.0"
+        "sass": "^1.57.1"
     }
 }
