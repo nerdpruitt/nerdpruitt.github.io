@@ -2,26 +2,26 @@
 <html lang="en" class="no-js">
 
 <head>
-    {% include '../partials/head.liquid' %}
+    {% include '../partials/head.njk' %}
 
     <link rel="stylesheet" href="/assets/css/home.css?v={% staticFileCache %}">
 
-    {% include '../partials/js-support.liquid' %}
+    {% include '../partials/js-support.njk' %}
 </head>
 
 <body class="home">
-    <nav class="nav-main" role="navigation">
+    {# <nav class="nav-main" role="navigation">
         <ul class="nav-main__list">
             <li><a class="nav-main__link" href="{{ '/about' | url }}">about</a></li>
             <li><a class="nav-main__link" href="{{ '/portfolio' | url }}">portfolio</a></li>
             <li><a class="nav-main__link" href="{{ '/resume' | url }}">resume</a></li>
         </ul>
-    </nav>
+    </nav> #}
 
     <main>
-        {{ content }}
+        {{ content | safe }}
     </main>
 
-    {% include '../partials/javascript.liquid' %}
+    {% include '../partials/javascript.njk' %}
 </body>
 </html>
