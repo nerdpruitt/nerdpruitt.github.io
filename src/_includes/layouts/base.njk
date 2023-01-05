@@ -2,11 +2,11 @@
 <html lang="en" class="no-js">
 
 <head>
-    {% include '../partials/head.liquid' %}
+    {% include '../partials/head.njk' %}
 
     <link rel="stylesheet" href="/assets/css/main.css?v={% staticFileCache %}">
 
-    {% include '../partials/js-support.liquid' %}
+    {% include '../partials/js-support.njk' %}
 </head>
 
 <body>
@@ -20,12 +20,12 @@
         {% endif %}
 
         <div class="nav-main-wrap">
-            {% include '../partials/nav.liquid' %}
+            {% include '../partials/nav.njk' %}
         </div>
     </header>
 
     <main>
-        {{ content }}
+        {{ content | safe }}
     </main>
 
     <div class="site-footer-wrap">
@@ -50,6 +50,6 @@
         </div>
     </div>
 
-    {% include '../partials/javascript.liquid' %}
+    {% include '../partials/javascript.njk' %}
 </body>
 </html>
